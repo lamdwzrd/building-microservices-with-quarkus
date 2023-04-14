@@ -7,12 +7,12 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.is;
 
 @QuarkusTest
-public class BookResourceTest {
+class BookResourceTest {
 
     @Test
-    public void testHelloEndpoint() {
+    void testHelloEndpoint() {
         given()
-          .when().get("/C:/devtools/git-2.39.2/api/books")
+          .when().get("/api/books")
           .then()
              .statusCode(200)
              .body(is("Hello RESTEasy"));
